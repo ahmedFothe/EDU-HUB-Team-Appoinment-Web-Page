@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+:root{
+    --body-bg-color: #fff;
+    --normal-text-color:#092442;
+    --footer-bg-color: #092442;
+    --footer-text-color: #3ec4e7;
+    --normal-text-size: 1.2rem;
+    --header-text-size: 2rem;
+    --footer-text-size: 1rem;
+    --social-text-size: 1.5rem;
+}
+body{
+    font-family: "Baloo Da 2", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 62.5%;
+    background-color: var(--body-bg-color);
+    color: var(--normal-text-color);
+}
+h1{
+    font-size: var(--header-text-size);
+}
+header {
+    height: 15vh;
+}
+.center_display{
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header section, footer section{
+    width: 97%;
+    height: 100%;
+    margin: 0 auto;
+
+}
+header section .center_display .logo img{
+    width: 30%;
+}
+header section .center_display .social_media{
+    width: 10%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+header section .center_display .social_media a .facebook{
+    color: #1877F2 ;
+    font-size: var(--social-text-size);
+    transition: all 0.3s ease-in-out;
+}
+header section .center_display .social_media a .facebook:hover{
+    color: #0053bf ;
+    transform: scale(0.9);
+}
+header section .center_display .social_media a .youtube{
+    color: #FF0000 ;
+    font-size: var(--social-text-size);
+    transition: all 0.3s ease-in-out;
+}
+header section .center_display .social_media a .youtube:hover{
+    color: #dd0000 ;
+    transform: scale(0.9);
+}
+.marquee_section{
+    width: 100%;
+    background-color: var(--footer-text-color);
+    color: var(--normal-text-color);
+}
+.marquee_section .marquee{
+    display: inline-block;
+    white-space: nowrap;
+    padding-left: 100%;
+    animation: marquee 15s linear infinite;
+}
+@keyframes marquee{
+    from{
+        transform: translateX(0%);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+.marquee_section .marquee_text{
+    display: inline-block;
+    font-size:var(--normal-text-size);
+    margin: 0 1rem;
+}
+main{
+    width: 97vw;
+    margin: 0 auto;
+}
+main .video_section{
+    width: 100%;
+    margin: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+main .video_section iframe{
+    width: 50vw;
+    height: 30vw;
+}
+main .help_section{
+    width: 100%;
+    margin: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+}
+main .help_section .contact_section{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+main .help_section .contact_section .personal_card{
+    width: 20rem;
+    height: 25rem;
+    background-color: var(--footer-text-color);
+    margin: 1rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.592);
+}
+main .help_section .contact_section .personal_card .profile_images{
+    width: 100%;
+    height: 20rem;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+main .help_section .contact_section .personal_card .profile_names{
+    width: 100%;
+    height: calc(25rem - 20rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 5px solid var(--footer-bg-color);
+}
+main .help_section .contact_section .personal_card .profile_names a{
+    text-decoration: none;
+    background-color: var(--footer-bg-color);
+    color: var(--body-bg-color);
+    font-family: "Roboto", sans-serif;
+    font-size: var(--normal-text-size);
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease-in-out;
+}
+main .help_section .contact_section .personal_card .profile_names a:hover{
+    color: var(--footer-bg-color);
+    background: transparent; 
+    border: 2px solid var(--footer-bg-color);
+    transform: scale(0.9);
+}
+main .common_section{
+    margin: 2rem 0;
+    padding: 1rem;
+    width: 100%;
+    height: 10rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.common_btn{
+    text-decoration: none;
+    background-color: var(--footer-text-color);
+    color: var(--normal-text-color);
+    font-size: var(--normal-text-size);
+    padding: 1rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.592);
+    transition: all 0.3s ease-in-out;
+}
+.common_btn:hover{
+    color: var(--footer-bg-color);
+    background: transparent; 
+    border: 2px solid var(--footer-bg-color);
+    transform: scale(0.9);
+}
+main .form_section, main .agreement_download_section{
+    width: 90%;
+    margin: 0 auto;
+    
+}
+footer{
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    font-size: var(--footer-text-size);
+    background-color: var(--footer-bg-color);
+    color: var(--footer-text-color);
+    height: 15vh;
+}
+footer section{
+    margin: 0 auto;
+    width: 97%;
+    height: 100%;
+}
+footer section .center_display strong a{
+    color: var(--footer-text-color);
+}
+
+
+
+
+/* Mobile Styles */
+@media (max-width: 600px) {
+h1{
+    font-size: 1.2rem;
+}
+footer section .center_display strong{
+    font-size: 0.7rem;
+}
+main .form_section, main .agreement_download_section{
+    width: 100%;
+}
+header section .center_display .social_media{
+    width: 50%;
+}
+.common_section h1{
+    width: 50%;
+}
+.common_btn{
+    font-size: 1rem;
+}
+footer section .center_display strong{
+    margin: 0 1rem;
+}
+main .video_section iframe{
+    width: 70vw;
+    height: 50vw;
+}
+.marquee_section .marquee_text{
+    font-size: 0.8rem;
+}
+}
+
+/* Tablet Styles */
+@media (min-width: 601px) and (max-width: 1024px) {
+h1{
+    font-size: 2rem;
+}
+footer section .center_display strong{
+    font-size: 1rem;
+}
+main .form_section, main .agreement_download_section{
+    width: 100%;
+}
+header section .center_display .social_media{
+    width: 20%;
+}
+.common_section h1{
+    width: 70%;
+}
+.common_btn{
+    font-size: 1.5rem;
+}
+main .video_section iframe{
+    width: 80vw;
+    height: 50vw;
+}
+}
